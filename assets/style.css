@@ -1,0 +1,549 @@
+/* variables declaration */
+:root {
+	--primary-color: #3396C0;
+	--secondary-color: #CD006B;
+	--third-color: #EEE325;
+}
+
+/* Reset CSS */
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: #f5f5f5;
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+}
+
+/* Conteneur principal */
+.container {
+	max-width: 1440px;
+	margin-inline: auto;
+	padding-inline: 5%;
+}
+
+section {
+	margin-block: 6em;
+}
+
+h2 {
+	font-family: 'Roboto Slab', sans-serif;
+	font-size: 40px;
+	font-weight: 900;
+	margin-block: 1em;
+}
+
+h3 {
+	font-family: 'Roboto Slab', sans-serif;
+	font-size: 22px;
+	font-weight: 900;
+	margin-block: 1em;
+}
+
+p,
+li {
+	font-family: Roboto, sans-serif;
+	font-size: 16px;
+	line-height: 26px;
+}
+
+.container {
+	max-width: 1440px;
+	margin-inline: auto;
+	padding-inline: 5%;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	width: 260px;
+	margin-block: 10px;
+}
+
+.btn {
+	background-color: var(--primary-color);
+	padding: 16px 32px;
+	margin-inline: 5px;
+	border-radius: 5px;
+	color: white;
+	text-decoration: none;
+}
+
+.devis {
+	background-color: var(--secondary-color);
+}
+
+#banner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: 470px;
+	position: relative;
+	overflow: hidden;
+}
+
+.banner-img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	object-fit: cover;
+	object-position: center;
+}
+
+/* Code CSS en prévision de l'ajout d'un carousel pour la bannière */
+
+
+/* === Carrousel === */
+/* Code CSS en prévision de l'ajout d'un carousel pour la bannière */
+/* Gestion des fleches du carrousel */
+/* === Code CSS pour le carrousel === */
+
+/* Conteneur du carrousel */
+/* === Conteneur du carrousel === */
+#banner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: 470px;
+	position: relative;
+	overflow: hidden;
+	/* Masquer les images hors de la vue */
+}
+
+/* === Conteneur des images du carrousel === */
+.carousel-images {
+	display: flex;
+	transition: transform 1s ease-in-out;
+	/* Ralentir la transition pour un défilement plus lent */
+}
+
+/* === Ajustement des images === */
+.carousel-images img {
+	width: 100%;
+	/* Chaque image prend 100% de la largeur du conteneur */
+	height: auto;
+	/* La hauteur est ajustée pour maintenir le ratio */
+	object-fit: cover;
+	/* Remplir sans distorsion */
+}
+
+/* === Flèches de navigation === */
+#banner .arrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: none;
+	border: none;
+	cursor: pointer;
+	z-index: 10;
+	/* S'assure que les flèches restent visibles */
+}
+
+#banner .arrow_left {
+	left: 50px;
+	/* Ajustement pour meilleure visibilité */
+}
+
+#banner .arrow_right {
+	right: 50px;
+}
+
+#banner .arrow img {
+	width: 40px;
+	height: auto;
+	opacity: 0.8;
+	transition: opacity 0.3s;
+}
+
+#banner .arrow:hover img {
+	opacity: 1;
+}
+
+/* === Points du carrousel === */
+.dots {
+	position: absolute;
+	bottom: 40px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	gap: 15px;
+	/* Espacement entre les dots */
+	z-index: 10;
+	/* Assure qu'ils restent visibles */
+}
+
+.dot {
+	width: 13px;
+	height: 13px;
+	background-color: rgba(255, 255, 255, 0.5);
+	border: 3px solid #fff;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dot:hover {
+	transform: scale(1.2);
+	/* Agrandissement du point au survol */
+}
+
+/* Point sélectionné */
+.dot_selected {
+	background-color: white;
+}
+
+/* Animation des dots sélectionnés */
+.dot_selected:hover {
+	transform: scale(1.3);
+	/* Agrandissement supplémentaire pour un effet plus dynamique */
+}
+
+/* === Texte du carrousel === */
+#banner p {
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: 'Roboto Slab', sans-serif;
+	font-weight: 900;
+	font-size: 50px;
+	line-height: 66px;
+	color: white;
+	text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+	text-align: center;
+	width: 80%;
+}
+
+/* Fin du code CSS pour le carousel */
+
+#banner p {
+	position: absolute;
+	top: 60%;
+	/* Centre verticalement */
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: 'Roboto Slab', sans-serif;
+	font-weight: 900;
+	font-size: 50px;
+	line-height: 66px;
+	color: white;
+	text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+	text-align: center;
+	width: 80%;
+}
+
+/* Ajuster la position des dots pour qu’ils soient bien sur l’image */
+.dots {
+	position: absolute;
+	bottom: 20px;
+	/* Monte les dots sur l’image */
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	gap: 10px;
+	z-index: 10;
+	/* Assure qu’ils restent visibles */
+}
+
+#banner span {
+	display: block;
+	font-weight: 400;
+	font-size: 30px;
+}
+
+#about-us {
+	display: flex;
+}
+
+#about-us article,
+#about-us aside {
+	flex: 1;
+}
+
+#about-us li {
+	background: url("./images/tricolor-icon.png") no-repeat left top;
+	font-size: 16px;
+	line-height: 26px;
+	padding-left: 2em;
+	width: 65%;
+	margin-bottom: 1em;
+
+}
+
+#products {
+	display: flex;
+	align-items: flex-start;
+	flex-direction: row-reverse;
+}
+
+#products div,
+#products aside {
+	flex: 1;
+}
+
+#products div {
+	padding: 0 6em;
+}
+
+#products h2 {
+	margin-top: 0;
+}
+
+.bg-yellow {
+	background-color: var(--third-color);
+}
+
+#question {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-block: 3em;
+}
+
+#question h2 {
+	margin-bottom: 10px;
+}
+
+#question p {
+	margin-bottom: 20px;
+}
+
+#why-us {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+#why-us>div {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+#why-us article {
+	max-width: 320px;
+	display: flex;
+	flex-direction: column;
+}
+
+#why-us img {
+	width: 33%;
+	height: 150px;
+	text-align: center;
+	margin-inline: auto;
+	margin-block: 0;
+	object-fit: contain;
+}
+
+.bg-lightblue {
+	background-color: #E6F4FB;
+}
+
+#contact {
+	margin-bottom: 0;
+}
+
+#contact article,
+#contact div {
+	flex: 1;
+}
+
+
+#contact .container {
+	flex-direction: row;
+	display: flex;
+	padding: 6em;
+}
+
+#contact .container>div>div {
+	display: flex;
+	padding-bottom: 20px;
+}
+
+#contact h3 {
+	margin-top: 0;
+	background: url("./images/tricolor-icon.png") no-repeat left top;
+	padding-left: 1.5em;
+	width: 200px;
+}
+
+.inline-icon {
+	vertical-align: middle;
+}
+
+footer {
+	background-color: #28363D;
+	color: white;
+	display: flex;
+	padding-block: 3em;
+	justify-content: space-evenly;
+	font-size: 12px;
+	align-items: center;
+}
+
+footer div {
+
+	position: relative;
+}
+
+.footer-logo {
+	background-color: white;
+	max-width: 308px;
+	padding: 10px;
+}
+
+.footer-contact {
+	margin-bottom: 1em;
+	font-weight: 700;
+	font-size: 16px;
+
+}
+
+@media all and (max-width: 1250px) {
+	#contact>article {
+		flex: 2;
+	}
+}
