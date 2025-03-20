@@ -234,14 +234,6 @@ header {
 
 /* Code CSS en prévision de l'ajout d'un carousel pour la bannière */
 
-
-/* === Carrousel === */
-/* Code CSS en prévision de l'ajout d'un carousel pour la bannière */
-/* Gestion des fleches du carrousel */
-/* === Code CSS pour le carrousel === */
-
-/* Conteneur du carrousel */
-/* === Conteneur du carrousel === */
 #banner {
 	display: flex;
 	flex-direction: column;
