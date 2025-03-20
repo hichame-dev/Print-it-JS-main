@@ -22,17 +22,12 @@
 	</header>
 	<main>
 		<div id="banner">
-			<!-- Conteneur des images du carrousel -->
-			<div class="carousel-images">
-				<img src="./assets/images/slideshow/slide1.jpg" alt="Slide 1">
-				<img src="./assets/images/slideshow/slide2.jpg" alt="Slide 2">
-				<img src="./assets/images/slideshow/slide3.jpg" alt="Slide 3">
-				<img src="./assets/images/slideshow/slide4.png" alt="Slide 4">
-			</div>
-
-			<!-- Texte du carrousel -->
+			<!-- Image unique qui change dynamiquement -->
+			<img class="carousel-image" src="./assets/images/slideshow/slide1.jpg" alt="Carrousel Slide">
+		
+			<!-- Texte dynamique -->
 			<p>Impressions tous formats <span>en boutique et en ligne</span></p>
-
+		
 			<!-- Flèches de navigation -->
 			<button class="arrow arrow_left">
 				<img src="./assets/images/arrow_left.png" alt="Flèche gauche">
@@ -40,12 +35,15 @@
 			<button class="arrow arrow_right">
 				<img src="./assets/images/arrow_right.png" alt="Flèche droite">
 			</button>
-
-			<!-- Points indicateurs (dots) du carrousel -->
-			<div class="dots">
-				<span class="dot active"></span>
-			</div>
+		
+			<!-- Conteneur pour les dots (générés dynamiquement) -->
+			<div class="dots"></div>
 		</div>
+		
+		<section id="about-us" class="container">
+			<!-- Contenu sur la section "À propos de nous" (pas besoin de le supprimer) -->
+		</section>
+
 
 
 		<section id="about-us" class="container">
